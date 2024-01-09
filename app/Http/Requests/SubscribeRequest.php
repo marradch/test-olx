@@ -25,7 +25,7 @@ class SubscribeRequest extends FormRequest
             'url' => [
                 'required',
                 'url',
-                'starts_with:https://www.olx.ua/d/obyavlenie/'
+                'starts_with:https://www.olx.ua/'
             ],
             'email' => 'required|email',
         ];
