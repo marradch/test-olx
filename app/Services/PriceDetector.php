@@ -23,7 +23,7 @@ class PriceDetector
         $matches = [];
         if (preg_match('/regularPrice(.*?),/s', $body, $matches)) {
             $matches2 = [];
-            if (preg_match('/\d+$/', $matches[1], $matches2)) {
+            if (preg_match('/(\d+(?:\.\d+)?)$/', $matches[1], $matches2)) {
                 return (float) $matches2[0];
             }
         }
